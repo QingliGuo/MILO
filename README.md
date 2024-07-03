@@ -14,7 +14,7 @@ xx
 Click the links below to check the analysis codes used in our manuscript entitled "Long deletions at repetitive genomic regions reveal evolutionary dynamics and enable sensitive detection of microsatellite instability".
 
 + Discovery of long_deletion signatures from deep-seq data
-+ Step-wise accumulation of slippage errors
++ Evidence of step-wise accumulation of slippage errors
 + Identification of long deletion signals in shallow-seq data
 + Application of MILO
 
