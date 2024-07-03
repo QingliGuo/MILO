@@ -4,19 +4,19 @@ MILO can be used for predicting **M**icrosatellite **I**nstability in **LO**w-qu
 ## 1.1 Installation
 xx
 
-## Dependency
+## 1.2 Dependencies
 xx
 
-## usage
+## 1.3 Usage
 xx
 
 # Analysis code
 Here we include analysis codes and data used in our manuscript entitled "The mutational signatures of formalin fixation on the human genome".
 
-+Discovery of long_deletion signatures
-Step-wise accumulation of slippage errors
-Detection of long deletions in lowpass data
-Application of MILO
++ Discovery of long_deletion signatures
++ Step-wise accumulation of slippage errors
++ Detection of long deletions in lowpass data
++ Application of MILO
 
 # Citation
 Cite our preprint:
