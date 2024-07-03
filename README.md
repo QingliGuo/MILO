@@ -11,7 +11,7 @@ xx
 xx
 
 # Analysis code
-Here we include analysis codes and data used in our manuscript entitled "The mutational signatures of formalin fixation on the human genome".
+Here we include analysis codes and data used in our manuscript entitled "Long deletions at repetitive genomic regions reveal evolutionary dynamics and enable sensitive detection of microsatellite instability".
 
 + Discovery of long_deletion signatures
 + Step-wise accumulation of slippage errors
