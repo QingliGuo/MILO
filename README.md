@@ -1,2 +1,7 @@
 # MILO
-xx
+Usage
+
+# Analysis code
+
+# Citation
+Cite our preprint:
