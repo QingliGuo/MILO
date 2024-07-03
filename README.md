@@ -1,5 +1,5 @@
-# MILO
-MILO (**M**icrosatellite **I**nstability in **LO**w-quality samples) can be used for predicting MMR status using input INDEL profiles (83-channel mutation spectrum, see [here](https://cancer.sanger.ac.uk/signatures/id/))
+# MILO (**M**icrosatellite **I**nstability in **LO**w-quality samples)
+MILO  can be used for predicting MMR status using input INDEL profiles (83-channel mutation spectrum, see [here](https://cancer.sanger.ac.uk/signatures/id/))
 
 ## 1.1 Installation
 xx
