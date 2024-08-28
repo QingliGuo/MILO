@@ -16,7 +16,7 @@ Click the links below to check the analysis codes used in our manuscript entitle
 + Discovery of long_deletion signatures from deep-seq data
 + Evidence of step-wise accumulation of slippage errors
 + Identification of long deletion signals in shallow-seq data
-+ Application of MILO
++ [Application of MILO](https://github.com/QingliGuo/MILO/blob/main/Notebooks/Application_of_MILO.ipynb)
 
 # Citation
 Cite our preprint:
