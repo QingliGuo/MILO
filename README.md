@@ -15,47 +15,29 @@ MILO script can be downloaded [here](https://github.com/QingliGuo/MILO/blob/main
   
 ## 1.3 Usage
 MILO predicts microsatellite instability in low-quality samples. Low-qulity samples could be 'shallow-sequencing' and/or 'low-purity' FF/FFPE samples. No matched normal is required also.
-  
-To run MILO as a command-line script:
-    
-    1) for FF tissue without noise correction:
-    
-    ```
-        python MILO_setup.py [-I|--Input] ./MILO_test_data.csv [-T|--TissueType] FF
-    ```
-    
-    2) for FF tissue with noise correction with plot:
-    ```    
-    python MILO_setup.py [-I|--Input] ./MILO_test_data.csv [-T|--TissueType] FF [-C|--NoiseCorrection] True [-P|--Plot] True
-    ```    
-    
-    3) for FF tissue with specified noise profile:
-    ```
-    python MILO_setup.py [-I|--Input] ./MILO_test_data.csv [-T|--TissueType] FF [-C|--NoiseCorrection] True [-N|--Noise_file] './test_noise.csv'
-    ```
-To run MILO prediction on FFPE samples, using **[-T|--TissueType] FFPE**.
-  
-To print out help informaiton, 
+
+1) for FF tissue without noise correction:
 ```
-python MILO_setup.py [-h|--help]'
+python MILO_setup.py [-I|--Input] ./MILO_test_data.csv [-T|--TissueType] FF
+```
+2) for FF tissue with noise correction with plot:
+
+```
+python MILO_setup.py [-I|--Input] ./MILO_test_data.csv [-T|--TissueType] FF [-C|--NoiseCorrection] True [-P|--Plot] True
+```
+3) for FF tissue with specified noise profile: 
+
+```
+python MILO_setup.py [-I|--Input] ./MILO_test_data.csv [-T|--TissueType] FF [-C|--NoiseCorrection] True [-N|--Noise_file] ./test_noise.csv
+```
+To run MILO prediction on FFPE samples, using **[-T|--TissueType] FFPE**.
+
+To print out help informaiton:
+
+```
+python MILO_setup.py [-h|--help]
 ```
 We tested MILO on our FF sWGS samples. Click [here](https://github.com/QingliGuo/MILO/tree/main/test_MILO) for the test data and results.
-
-+ Run the command line:
-```
-python FFPEsig.py [--input|-i] <Path-to-the-DataFrame> [--sample|-s] <Sample_id> [--label|-l] <Unrepaired|Repaired> [--output_dir|-o] <Path-of-output-folder>
-```
-2. Example
-
-```
-python FFPEsig.py --input ./Data/simulated_PCAWG_FFPE_unrepaired.csv --sample ColoRect-AdenoCA::SP21528 --label Unrepaired --output_dir FFPEsig_OUTPUT
-```
-Or 
-
-```
-python FFPEsig.py -i ./Data/simulated_PCAWG_FFPE_unrepaired.csv -s ColoRect-AdenoCA::SP21528 -l Unrepaired -o FFPEsig_OUTPUT
-```
-
 
 # Analysis code
 The links below include analysis codes used in our manuscript entitled "Long deletions at repetitive genomic regions reveal evolutionary dynamics and enable sensitive detection of microsatellite instability".
