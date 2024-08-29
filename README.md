@@ -48,12 +48,12 @@ We tested MILO on our FF sWGS samples. Click [here](https://github.com/QingliGuo
            
 + **[-I|--Input] <path-to-input-file>**: the location of your CSV file containing the 83-channel mutational counts for your sample(s).
 
-1) CSV Format: The file should be in CSV format with comma separators (,) between values.
-2) Column Structure: 
-  + The file should contain 84 columns.
-  + The first column must be the sample ID.
-  + The following 83 columns should represent the 83-channel mutation profile.
-3) Row Structure: Each row in the file represents a unique sample.
+  + CSV Format: The file should be in CSV format with comma separators (,) between values.
+  + Column Structure:
+      + The file should contain 84 columns.
+      + The first column must be the sample ID.
+      + The following 83 columns should represent the 83-channel mutation profile.
+  + Row Structure: Each row in the file represents a unique sample.
                 
 + **[-T|TissueType] <FFPE|FF>**: MILO trainded sperate classifers for FFPE and fresh frozen (FF) samples. So, it is important you specify your tissye type.
   
