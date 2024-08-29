@@ -31,7 +31,7 @@ python MILO_setup.py [-I|--Input] ./MILO_test_data.csv [-T|--TissueType] FF [-C|
 ```
 python MILO_setup.py [-I|--Input] ./MILO_test_data.csv [-T|--TissueType] FF [-C|--NoiseCorrection] True [-N|--Noise_file] ./test_noise.csv
 ```
-4) To run MILO prediction on FFPE samples, using `[-T|--TissueType] FFPE`.
+4) On FFPE samples in above examples, using `[-T|--TissueType] FFPE`.
 
 5) To print out help informaiton:
 
@@ -46,7 +46,7 @@ We tested MILO on our FF sWGS samples. Click [here](https://github.com/QingliGuo
 
 1)  Required
            
-+ **[-I|--Input] <path-to-input-file>**: the location of your CSV file containing the 83-channel mutational counts for your sample(s).
++ **[-I|--Input] <path_of_input_file>** : the location of your CSV file containing the 83-channel mutational counts for your sample(s).
 
   + CSV Format: The file should be in CSV format with comma separators (,) between values.
   + Column Structure:
