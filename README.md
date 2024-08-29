@@ -16,33 +16,33 @@ MILO script can be downloaded [here](https://github.com/QingliGuo/MILO/blob/main
 ## 1.3 Usage
 MILO predicts microsatellite instability in low-quality samples. Low-qulity samples could be 'shallow-sequencing' and/or 'low-purity' FF/FFPE samples. No matched normal is required also.
 
-### Example commands        
-1) for FF tissue without noise correction:
+### 1.3.1 Example commands        
+1) On FF samples without noise correction:
 ```
 python MILO_setup.py [-I|--Input] ./MILO_test_data.csv [-T|--TissueType] FF
 ```
-2) for FF tissue with noise correction with plot:
+2) On FF samples with noise correction with plot using default noise profile:
 
 ```
 python MILO_setup.py [-I|--Input] ./MILO_test_data.csv [-T|--TissueType] FF [-C|--NoiseCorrection] True [-P|--Plot] True
 ```
-3) for FF tissue with specified noise profile: 
+3) On FF samples with noise correction with user-specified noise profile: 
 
 ```
 python MILO_setup.py [-I|--Input] ./MILO_test_data.csv [-T|--TissueType] FF [-C|--NoiseCorrection] True [-N|--Noise_file] ./test_noise.csv
 ```
-To run MILO prediction on FFPE samples, using `[-T|--TissueType] FFPE`.
+4) To run MILO prediction on FFPE samples, using `[-T|--TissueType] FFPE`.
 
-To print out help informaiton:
+5) To print out help informaiton:
 
 ```
 python MILO_setup.py [-h|--help]
 ```
 
-### Our tests
+### 1.3.2 Our tests
 We tested MILO on our FF sWGS samples. Click [here](https://github.com/QingliGuo/MILO/tree/main/test_MILO) for the test data and results. Please format your input data as descirbed in the following section.
 
-### Arguments
+### 1.3.3 Arguments
 
 1)  Required
            
@@ -64,7 +64,7 @@ We tested MILO on our FF sWGS samples. Click [here](https://github.com/QingliGuo
   + [-P|--Plot] <False|True>:
   + [-PC|--Prob_cutoff] <float>:
 
-### Output files
+### 1.3.4 Output files
 
 Here are the output files from MILO's prediction:
   + CSV file with indel profiles and the MILO predictions
