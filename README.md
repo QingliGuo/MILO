@@ -70,14 +70,6 @@ Here are the output files from MILO's prediction:
   + CSV file with indel profiles and the MILO predictions
   + (**Optional**) CSV file of MILO predicted long-deletion intensity in MSI positive files
   + (**Optional**) PDFs of indel profiles in predicted MMRd samples (and/or noise-corrected MMRd profiles) can be found in the folder `./plots/`.
-      
-# Analysis code
-The links below include analysis codes used in our manuscript entitled "Long deletions at repetitive genomic regions reveal evolutionary dynamics and enable sensitive detection of microsatellite instability".
-
-+ [Discovery of long_deletion signatures from deep WGS data](https://github.com/QingliGuo/MILO/blob/main/Notebooks/Long_deletion_sigs_discovery_from_DeepSeqData.ipynb)
-+ [Evidence of stepwise accumulation of slippage errors](https://github.com/QingliGuo/MILO/blob/main/Notebooks/Evidence_of_stepwise_slippage_events.ipynb)
-+ [Identification of long deletion signals in shallow WGS data](https://github.com/QingliGuo/MILO/blob/main/Notebooks/Long_deletion_sig_features_in_shallow_WGS.ipynb)
-+ [Application of MILO](https://github.com/QingliGuo/MILO/blob/main/Notebooks/Application_of_MILO.ipynb)
 
 # Citation
 
