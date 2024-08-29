@@ -58,11 +58,10 @@ We tested MILO on our FF sWGS samples. Click [here](https://github.com/QingliGuo
 + **[-T|TissueType] <FFPE|FF>**: MILO trained separate classifiers for FFPE and fresh frozen (FF) samples. Therefore, it is important that you specify your tissue type.
   
 2)  Optional
-  + [-C|--NoiseCorrection] <False|True>:
-  + [-N|--Noise_file] <path-to-noise-file>: Default pattern is the averaged profile we observed in our FF/FFPE sWGS non-MSI samples. The users can also provide their own noise profile.
-  + p: used to determine the high confidence MSI. Default value is 0.75.
-  + [-P|--Plot] <False|True>:
-  + [-PC|--Prob_cutoff] <float>:
+  + [-C|--NoiseCorrection] <False|True>: determine if the noise correction will be carried out by MILO
+  + [-N|--Noise_file] <path_to_noise_file>: users can specify a noise profile using this argument. If none is provided, MILO defaults to using cohort-specific noise profiles from high-confidence MMRp samples (Prob(MSI) < 0.1). If no such profiles are available, MILO uses the FF/FFPE noise pattern from our sWGS cohorts as described in our paper.
+  + [-P|--Plot] <False|True>: determine if the PDFs of indel profiles will be generated
+  + [-PC|--Prob_cutoff] <float>: specify the threshold for Prob(MSI) to determine high-confidence MSI samples. The default value is 0.75, meaning only samples with Prob(MSI) > 0.75 are considered high-confidence MSI predictions.
 
 ### 1.3.4 Output files
 
