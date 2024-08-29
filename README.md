@@ -16,6 +16,7 @@ MILO script can be downloaded [here](https://github.com/QingliGuo/MILO/blob/main
 ## 1.3 Usage
 MILO predicts microsatellite instability in low-quality samples. Low-qulity samples could be 'shallow-sequencing' and/or 'low-purity' FF/FFPE samples. No matched normal is required also.
 
+### Example commands        
 1) for FF tissue without noise correction:
 ```
 python MILO_setup.py [-I|--Input] ./MILO_test_data.csv [-T|--TissueType] FF
@@ -37,8 +38,38 @@ To print out help informaiton:
 ```
 python MILO_setup.py [-h|--help]
 ```
-We tested MILO on our FF sWGS samples. Click [here](https://github.com/QingliGuo/MILO/tree/main/test_MILO) for the test data and results.
 
+### Our tests
+We tested MILO on our FF sWGS samples. Click [here](https://github.com/QingliGuo/MILO/tree/main/test_MILO) for the test data and results. Please format your input data as descirbed in the following section.
+
+### Arguments
+
+1)  Required
+           
++ **[-I|--Input] <path-to-input-file>**: the location of your CSV file containing the 83-channel mutational counts for your sample(s).
+
+1) CSV Format: The file should be in CSV format with comma separators (,) between values.
+2) Column Structure: 
+++ The file should contain 84 columns.
+++ The first column must be the sample ID.
+++ The following 83 columns should represent the 83-channel mutation profile.
+3) Row Structure: Each row in the file represents a unique sample.
+                
++ **[-T|TissueType] <FFPE|FF>**: MILO trainded sperate classifers for FFPE and fresh frozen (FF) samples. So, it is important you specify your tissye type.
+  
+2)  Optional
+++ [-C|--NoiseCorrection] <False|True>:
+++ [-N|--Noise_file] <path-to-noise-file>: Default pattern is the averaged profile we observed in our FF/FFPE sWGS non-MSI samples. The users can also provide their own noise profile.
+++ p: used to determine the high confidence MSI. Default value is 0.75.
+++ [-P|--Plot] <False|True>:
+++ [-PC|--Prob_cutoff] <float>:
+
+### Output files
+Output:
+  1) CSV file with indel profiles and the MILO predictions 
+  2) (optional) CSV file of MILO predicted long-deletion intensity in MSI positive files
+  3) (optional) Indel profiles of MMRd samples (and the noise-corrected profiles if correction step is required) under the folder of './plots/'.
+      
 # Analysis code
 The links below include analysis codes used in our manuscript entitled "Long deletions at repetitive genomic regions reveal evolutionary dynamics and enable sensitive detection of microsatellite instability".
 
