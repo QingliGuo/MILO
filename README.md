@@ -3,10 +3,10 @@ MILO can be used for predicting **M**icrosatellite **I**nstability in **LO**w-qu
 
 Low-quality samples could be `shallow WGS` (e.g., ~0.1X) and/or `low-purity` FF/FFPE samples (>2% for FF and >5% for FFPE). No matched normal is required.
 
-## 1.1 Installation
+## 1 Installation
 MILO script can be downloaded [here](https://github.com/QingliGuo/MILO/blob/main/MILO_setup.py). You also need to download the two trained classifiers ([FFPE_rf](https://github.com/QingliGuo/MILO/blob/main/FFPE_rf.joblib) and [FF_rf](https://github.com/QingliGuo/MILO/blob/main/FF_rf.joblib)) to the same folder.
 
-## 1.2 Dependencies
+## 2 Dependencies
 1) Python - MILO is tested on python 3.11.0.
 2) Python packages used by MILO
 + joblib (1.2.0)
@@ -15,10 +15,10 @@ MILO script can be downloaded [here](https://github.com/QingliGuo/MILO/blob/main
 + seaborn (0.13.2)
 + sys, getopt, datetime, sklearn
   
-## 1.3 Usage
+## 3 Usage
 MILO predicts microsatellite instability in low-quality samples. Low-qulity samples could be 'shallow-sequencing' and/or 'low-purity' FF/FFPE samples. No matched normal is required also.
 
-### 1.3.1 Example commands        
+### 3.1 Example commands        
 1) On FF samples without noise correction:
 ```
 python MILO_setup.py [-I|--Input] ./MILO_test_data.csv [-T|--TissueType] FF
@@ -41,10 +41,10 @@ python MILO_setup.py [-I|--Input] ./MILO_test_data.csv [-T|--TissueType] FF [-C|
 python MILO_setup.py [-h|--help]
 ```
 
-### 1.3.2 Our tests
+### 3.2 Our tests
 We tested MILO on our FF sWGS samples. Click [here](https://github.com/QingliGuo/MILO/tree/main/test_MILO) for the test data and results. Please format your input data as descirbed in the following section.
 
-### 1.3.3 Arguments
+### 3.3 Arguments
 
 1)  Required
            
@@ -65,13 +65,13 @@ We tested MILO on our FF sWGS samples. Click [here](https://github.com/QingliGuo
   + [-P|--Plot] <False|True>: determine if the PDFs of indel profiles will be generated
   + [-PC|--Prob_cutoff] <float>: specify the threshold for Prob(MSI) to determine high-confidence MSI samples. The default value is 0.75, meaning only samples with Prob(MSI) > 0.75 are considered high-confidence MSI predictions.
 
-### 1.3.4 Output files
+### 3.4 Output files
 
 Here are the output files from MILO's prediction:
   + CSV file with indel profiles and the MILO predictions
   + (**Optional**) CSV file of MILO predicted long-deletion intensity in MSI positive files
   + (**Optional**) PDFs of indel profiles in predicted MMRd samples (and/or noise-corrected MMRd profiles) can be found in the folder `./plots/`.
 
-# Citation
+# 4 Citation
 
 
