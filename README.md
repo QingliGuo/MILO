@@ -16,7 +16,6 @@ MILO script can be downloaded [here](https://github.com/QingliGuo/MILO/blob/main
 + sys, getopt, datetime, sklearn
   
 ## 3 Usage
-MILO predicts microsatellite instability in low-quality samples. Low-qulity samples could be 'shallow-sequencing' and/or 'low-purity' FF/FFPE samples. No matched normal is required also.
 
 ### 3.1 Example commands        
 1) On FF samples without noise correction:
