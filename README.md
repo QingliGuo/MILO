@@ -4,7 +4,7 @@ MILO stands for **M**icrosatellite **I**nstability dection using **LO**ng-deleti
 MILO is highly sensitive in low-quality samples, such as `low-purity` FF/FFPE samples (>2% for FF and >5% for FFPE; No matched normal is required) and/or `low-coverage` (e.g., ~0.1X) sequencing data.
 
 ## 1 Installation
-MILO script can be downloaded [here](https://github.com/QingliGuo/MILO/blob/main/MILO_setup.py). You also need to download the trained classifiers ([FFPE_rf](https://github.com/QingliGuo/MILO/blob/main/FFPE_rf.joblib), [FF_rf](https://github.com/QingliGuo/MILO/blob/main/FF_rf.joblib)) and [Deep_rf]() to the same folder in order to use it..
+MILO script can be downloaded [here](https://github.com/QingliGuo/MILO/blob/main/MILO_setup.py). You also need to download the trained classifiers ([FFPE_rf](https://github.com/QingliGuo/MILO/blob/main/FFPE_rf.joblib), [FF_rf](https://github.com/QingliGuo/MILO/blob/main/FF_rf.joblib)) and [Deep_rf]() to the same folder in order to use it.
 
 ## 2 Dependencies
 1) Python - MILO is tested on python 3.11.0.
