@@ -1,10 +1,10 @@
 # MILO
-MILO can be used for predicting **M**icrosatellite **I**nstability in **LO**w-quality samples. MILO takes indel profiles (83-channel mutation spectrum, see [here](https://cancer.sanger.ac.uk/signatures/id/) for more information) of given samples and predicts their MSI status. 
+MILO stands for **M**icrosatellite **I**nstability dection using **LO**ng-deletion signature. MILO takes indel profiles (83-channel mutation spectrum, see [here](https://cancer.sanger.ac.uk/signatures/id/) for more information) of given samples and predicts their MSI status and estimate MSI intensity. 
 
-Low-quality samples could be `shallow WGS` (e.g., ~0.1X) and/or `low-purity` FF/FFPE samples (>2% for FF and >5% for FFPE). No matched normal is required.
+MILO is highly sensitive in low-quality samples, such as `low-purity` FF/FFPE samples (>2% for FF and >5% for FFPE; No matched normal is required) and/or `low-coverage` (e.g., ~0.1X) sequencing data.
 
 ## 1 Installation
-MILO script can be downloaded [here](https://github.com/QingliGuo/MILO/blob/main/MILO_setup.py). You also need to download the two trained classifiers ([FFPE_rf](https://github.com/QingliGuo/MILO/blob/main/FFPE_rf.joblib) and [FF_rf](https://github.com/QingliGuo/MILO/blob/main/FF_rf.joblib)) to the same folder.
+MILO script can be downloaded [here](https://github.com/QingliGuo/MILO/blob/main/MILO_setup.py). You also need to download the trained classifiers ([FFPE_rf](https://github.com/QingliGuo/MILO/blob/main/FFPE_rf.joblib), [FF_rf](https://github.com/QingliGuo/MILO/blob/main/FF_rf.joblib)) and [Deep_rf]() to the same folder in order to use it..
 
 ## 2 Dependencies
 1) Python - MILO is tested on python 3.11.0.
