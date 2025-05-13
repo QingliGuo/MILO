@@ -76,3 +76,6 @@ Here are the output files from MILO's prediction:
 Guo, Q. et al. Long deletion signatures in repetitive genomic regions track somatic evolution and enable sensitive detection of microsatellite instability. bioRxiv 2024.10.03.616572 (2024) doi:10.1101/2024.10.03.616572.
 
 Cite our [Preprint](https://www.biorxiv.org/content/10.1101/2024.10.03.616572v1)!
+
+# 4 License
+This code is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0). See the [LICENSE](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en) file for details.
