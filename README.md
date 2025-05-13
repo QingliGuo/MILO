@@ -15,6 +15,8 @@ MILO script can be downloaded [here](https://github.com/QingliGuo/MILO/blob/main
 + seaborn (0.13.2)
 + sys, getopt, datetime, sklearn
   
+With the pre-trained classifers, MILO script, and the relevant dependencies were successfully downloaded, it should take <1 min to run MILO. Please follow the example file to format your input file.
+
 ## 3 Usage
 
 ### 3.1 Example commands        
