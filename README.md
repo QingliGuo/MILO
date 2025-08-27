@@ -138,9 +138,11 @@ For a full list of options, run `milo train --help`.
   
 You can use your trained your own model for prediction instead of the built-in ones.
 
-    ```bash
-    milo predict --input ./test_data/testing_dataset.csv --custom_model ./new_milo_model/custom_milo_model.joblib
-    ```
+```bash
+milo predict \
+    --input ./test_data/testing_dataset.csv \
+    --custom_model ./new_milo_model/custom_milo_model.joblib
+```
     
 You can also combine the flags listed above for more advanced analysis when using your trained model. 
 
