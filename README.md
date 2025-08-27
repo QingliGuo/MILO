@@ -84,9 +84,9 @@ This is the primary function of MILO. It uses built-in or custom models to class
 
 You can combine several flags for more detailed analysis:
 
-* **Noise Correction (`-c` or `--noise_correction`):** Correct for technical noise in low-pass samples.
-* **MSI Intensity Score (`-int` or `--msi_intensity`):** Calculate a quantitative score for the degree of instability.
-* **Generate Plots (`-p` or `--plot`):** Create and save ID83 profile plots for all samples.
+* Noise Correction (`-c` or `--noise_correction`): Correct for technical noise in low-pass samples.
+* MSI Intensity Score (`-int` or `--msi_intensity`): Calculate a quantitative score for the degree of instability.
+* Generate Plots (`-p` or `--plot`): Create and save ID83 profile plots for all samples.
 
 **Example of an advanced analysis run:**
 ```bash
@@ -100,6 +100,7 @@ milo predict \
     --purity_norm \
     --plot
 ```
+For a full list of options, run `milo predict --help`.
 
 ## 2. Training a Custom Model (`train`)
 
@@ -116,6 +117,12 @@ milo train \
     --input ./test_data/custom_model/training_dataset.csv \
     --output ./new_milo_model
 ```
+
+This will create a `new_milo_model` directory containing `custom_milo_model.joblib`, which you can then use with the `predict` command.
+
+For a full list of options, run `milo train --help`.
+
+---
 
 ## Test Data
 
