@@ -70,7 +70,7 @@ After downloading and unzipping (`unzip test_data.zip`), you can run the example
 
 ---
 
-## Usage Demo using Test Data
+## Usage
 
 MILO operates using two main sub-commands: `predict` and `train`.
 
