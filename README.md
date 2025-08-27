@@ -10,7 +10,7 @@
 * [Installation](#installation)
 * [Input File Format](#input-file-format)
 * [Usage](#usage)
-  * [Predicting MSI Status (`predict`)](#1-predicting-msi-status-predict)
+  * [Predicting MSI Status using Pre-trained Models (`predict`)](#1-predicting-msi-status-predict)
   * [Training a Custom Model (`train`)](#2-training-a-custom-model-train)
 * [Test Data](#test-data)
 * [License](#license)
