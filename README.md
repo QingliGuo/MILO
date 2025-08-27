@@ -56,7 +56,7 @@ The 83-channel names follow the [COSMIC(v3.4)](https://cancer.sanger.ac.uk/signa
 
 **Additional Requirement for train mode**
 
-In addition to the format above, the input file for `milo train` must also contain a label column (e.g., MSI_status) with values 0 for MMRp and 1 for MMRd.
+In addition to the format above, the input file for `milo train` must also contain a label column (e.g., MSI_status) with values `0` for MMRp and `1` for MMRd.
 
 ---
 
