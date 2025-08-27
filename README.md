@@ -145,9 +145,8 @@ To view a copy of this license, visit [http://creativecommons.org/licenses/by-nc
 
 If you use MILO in your research, please cite:
 
-> Guo, Q. *et al.*  
-> *Long deletion signatures in repetitive genomic regions track somatic evolution and enable sensitive detection of microsatellite instability.*  
-> *bioRxiv* 2024.10.03.616572 (2024)  
-> doi: [10.1101/2024.10.03.616572](https://doi.org/10.1101/2024.10.03.616572)
+Guo, Q. *et al.*  
+*Long deletion signatures in repetitive genomic regions track somatic evolution and enable sensitive detection of microsatellite instability.*  
+*bioRxiv* 2024.10.03.616572 (2024) doi: [10.1101/2024.10.03.616572](https://doi.org/10.1101/2024.10.03.616572)
 
 [Link to Preprint](https://doi.org/10.1101/2024.10.03.616572)
