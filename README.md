@@ -82,7 +82,11 @@ This is the primary function of MILO. It uses built-in or custom models to class
     ```bash
     milo predict --input <path/to/your_data.csv> --sample_type standard
     ```
-
+* **Using a Custom Model trained from your labeled dataset**
+If you have trained your own model, you can use it for prediction instead of the built-in ones.
+    ```bash
+    milo predict --input <path/to/your_data.csv> --custom_model <path/to/your_trained_model.joblib>
+    ```
 #### **Advanced Prediction Options**
 
 You can combine several flags for more detailed analysis:
