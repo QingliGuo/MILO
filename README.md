@@ -99,6 +99,7 @@ milo predict \
     --cov_norm ./test_data/built_in_model/cov_purity_simulated_data.csv \
     --purity_norm \
     --plot
+```
 
 ## 2. Training a Custom Model (`train`)
 
