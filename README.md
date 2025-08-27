@@ -52,18 +52,12 @@ MILO `predict` mode requires a CSV or TSV input file (`--input <PATH-to-YOUR-FIL
 1.  **Samples as rows:** The first column contains sample IDs, and the header contains the 83 indel channel names.
 2.  **Samples as columns:** The header contains sample IDs, and the first column contains the 83 indel channel names.
 
-The 83-channel names use  indel spectra features names. The names can be separated by either underscores (`_`) or colons (`:`). For example, `1_Del_C_0` and `1:Del:C:0` are both accepted.
-
-The 83-channel names follow the [COSMIC(v3.4)](https://cancer.sanger.ac.uk/signatures/id/) indel spectra feature naming convention. All 83 channels must be present in the input files for both `milo predict` and `milo train` modes. Channel names may be separated by either underscores (_) or colons (:); for example, 1_Del_C_0 and 1:Del:C:0 are both accepted. 
+The 83-channel names follow the [COSMIC(v3.4)](https://cancer.sanger.ac.uk/signatures/id/) indel spectra feature naming convention. All 83 channels must be present in the input files for both `milo predict` and `milo train` modes. Channel names may be separated by either underscores (_) or colons (:); for example, 1_Del_C_0 and 1:Del:C:0 are both accepted.
 
 **Additional Requirement for train mode**
 
 In addition to the format above, the input file for `milo train` must also contain a label column (e.g., MSI_status) with values 0 for MMRp and 1 for MMRd.
 
-### For `train` mode
-MILO requires a similar CSV or TSV input file (`--input <PATH-to-YOUR-FILE>` or `-i <PATH-to-YOUR-FILE>`) containing sample names mutation counts across the 83 indel channels.
-
-In addition, your training file must also contain:  A **label column** (e.g., `MSI_status`) with values `0` for MMRp and `1` for MMRd. 
 
 ---
 
