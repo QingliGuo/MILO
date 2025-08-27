@@ -163,7 +163,6 @@ MILO creates an output directory (e.g., `./milo_results/` by default) containing
         * `MSI intensity`: For standard, high-quality samples, calculated using original mutation counts.
         * `Relative MSI intensity`: For low-pass samples, calculated using normalised mutation propotions.
         * `MSI intensity (adjusted)`: For low-pass samples, calculated using coverage- and/or purity-adjusted mutation counts.
-          Note: `--cov_norm <PATH>` option accepts a file containing sample names and a coverage column (a purity column is optional).
           - `--cov_norm <PATH>`: File with sample names and a coverage column (purity column optional).
           - `--purity_norm`: Enables purity-adjusted counts. If purity column is not provided, MILO will estimate it from noise correction results (`--noise_correction`).
 
