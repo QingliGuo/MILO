@@ -97,7 +97,7 @@ This is the primary function of MILO. It uses built-in or custom models to class
     
 #### **Advanced Prediction Options**
 
-You can combine several flags for more detailed analysis:
+You can combine several flags for more detailed analysis, for example:
 
 * Noise Correction (`-c` or `--noise_correction`): Correct for technical noise in low-pass samples.
 * MSI Intensity Score (`-int` or `--msi_intensity`): Calculate a quantitative score for the degree of instability.
@@ -122,7 +122,7 @@ For a full list of options, run `milo predict --help`.
 
 You can train a new **Random Forest model** using your own labeled dataset.  
 
-**Example training command:**
+### Example Training Command
 
 ```bash
 milo train \
@@ -134,12 +134,14 @@ This will create a `new_milo_model` directory containing `custom_milo_model.jobl
 
 For a full list of options, run `milo train --help`.
 
-**Using a custom model trained from your own labeled dataset**
+### Prediction of MSI using a custom model
   
 You can use your trained your own model for prediction instead of the built-in ones.
+
     ```bash
     milo predict --input ./test_data/testing_dataset.csv --custom_model ./new_milo_model/custom_milo_model.joblib
-    ```    
+    ```
+    
 You can also combine the flags listed above for more advanced analysis when using your trained model. 
 
 ---
