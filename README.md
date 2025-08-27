@@ -13,6 +13,7 @@
   * [Predicting MSI Status using Pre-trained Models (`predict`)](#1-predicting-msi-status-predict)
   * [Training a Custom Model (`train`)](#2-training-a-custom-model-train)
 * [Test Data](#test-data)
+* [Output Files](#output-files)
 * [License](#license)
 * [Citation](#citation)
 
@@ -133,6 +134,37 @@ To help you get started, we provide example datasets for both prediction and tra
 - **Download Link:** [test_data.zip](https://github.com/QingliGuo/MILO/raw/main/test_data.zip)
 
 After downloading (`wget https://github.com/QingliGuo/MILO/raw/main/test_data.zip`) and unzipping (`unzip test_data.zip`), you can run the example commands provided in the [Usage](#usage) section.
+
+---
+
+## Output Files
+
+MILO creates an output directory (e.g., `./milo_results/` by default) containing the following files depending on the command and options used.
+
+### `predict` Command Outputs
+
+1.  **`MILO_predictions.csv`**
+    This is the main results file. It contains the following columns for each sample:
+    * **`SampleID`**: The identifier for the sample.
+    * **`Prob(MSI)`**: The predicted probability of the sample being MSI-High, ranging from 0.0 to 1.0.
+    * **`MILO_prediction`**: The final classification, which can be 'Yes', 'Maybe', or 'No' based on the probability thresholds.
+    * **MSI Intensity Score (Optional)**: This column is added if you use the `-int` flag. The column name changes based on the input data type:
+        * **`MSI intensity`**: For standard, high-quality samples.
+        * **`Relative MSI intensity`**: For low-pass samples when no coverage data is provided.
+        * **`MSI intensity (adjusted)`**: For low-pass samples when coverage data (`--cov_norm`) is provided.
+
+2.  **`MILO_noise_corrected_profiles.csv` (Optional)**
+    This file is generated only when using the `-c` or `--noise_correction` flag. It contains the corrected 83-channel indel profiles for the samples classified as 'Yes'.
+
+3.  **`plots/` Directory (Optional)**
+    This directory is created when using the `-p` or `--plot` flag. It contains several subdirectories with ID83 profile plots in PDF format:
+    * **`MMRd/`, `MMRp/`, `Maybe/`**: These folders contain individual profile plots for each sample, categorized by their prediction status.
+    * **`Comparison/`**: This folder contains mirrored comparison plots, such as the average MMRd vs. MMRp profile, or plots showing a sample's profile before and after noise correction.
+
+### `train` Command Output
+
+1.  **`custom_milo_model.joblib`**
+    This file is the trained scikit-learn model object saved in a `.joblib` file. It can be used with the `--custom_model` argument in the `predict` command.
 
 ---
 
