@@ -58,7 +58,6 @@ The 83-channel names follow the [COSMIC(v3.4)](https://cancer.sanger.ac.uk/signa
 
 In addition to the format above, the input file for `milo train` must also contain a label column (e.g., MSI_status) with values 0 for MMRp and 1 for MMRd.
 
-
 ---
 
 ## Test Data
@@ -67,7 +66,7 @@ To help you get started, we provide example datasets for both prediction and tra
 
 - **Download Link:** [test_data.zip](https://github.com/QingliGuo/MILO/raw/main/test_data.zip)
 
-After downloading (`wget https://github.com/QingliGuo/MILO/raw/main/test_data.zip`) and unzipping (`unzip test_data.zip`), you can run the example commands provided in the [Usage](#usage) section.
+After downloading and unzipping (`unzip test_data.zip`), you can run the example commands provided in the [Usage](#usage) section.
 
 ---
 
