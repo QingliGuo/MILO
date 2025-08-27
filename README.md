@@ -115,3 +115,32 @@ Your training file must contain:
 milo train \
     --input ./test_data/custom_model/training_dataset.csv \
     --output ./new_milo_model
+```
+
+## Test Data
+
+To help you get started, we provide example datasets for both prediction and training.
+
+- **Download Link:** [test_data.zip](https://github.com/QingliGuo/MILO/raw/main/test_data.zip)
+
+After downloading (`wget https://github.com/QingliGuo/MILO/raw/main/test_data.zip`) and unzipping (`unzip test_data.zip`), you can run the example commands provided in the [Usage](#usage) section.
+
+---
+
+## License
+
+This program is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License**.  
+To view a copy of this license, visit [http://creativecommons.org/licenses/by-nc-sa/4.0/](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+---
+
+## Citation
+
+If you use MILO in your research, please cite:
+
+> Guo, Q. *et al.*  
+> *Long deletion signatures in repetitive genomic regions track somatic evolution and enable sensitive detection of microsatellite instability.*  
+> *bioRxiv* 2024.10.03.616572 (2024)  
+> doi: [10.1101/2024.10.03.616572](https://doi.org/10.1101/2024.10.03.616572)
+
+[Link to Preprint](https://doi.org/10.1101/2024.10.03.616572)
