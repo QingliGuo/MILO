@@ -9,10 +9,10 @@
 
 * [Installation](#installation)
 * [Input File Format](#input-file-format)
+* [Test Data](#test-data)
 * [Usage](#usage)
   * [Predicting MSI Status using Pre-trained Models (`predict`)](#1-predicting-msi-status-predict)
   * [Training a Custom Model (`train`)](#2-training-a-custom-model-train)
-* [Test Data](#test-data)
 * [Output Files](#output-files)
 * [License](#license)
 * [Citation](#citation)
@@ -47,7 +47,7 @@ Installing MILO in a dedicated Conda environment is strongly recommended to ensu
 
 ## Input File Format
 
-MILO expects a CSV or TSV file containing sample names and mutation counts across the 83 indel channels. The tool can automatically detect two formats:
+MILO `predict` mode requires a CSV or TSV input file (`--input <PATH-to-YOUR-FILE>` or `-i <PATH-to-YOUR-FILE>`) containing sample names and mutation counts across the 83 indel channels. The tool can automatically detect two formats:
 
 1.  **Samples as rows:** The first column contains sample IDs, and the header contains the 83 indel channel names.
 2.  **Samples as columns:** The header contains sample IDs, and the first column contains the 83 indel channel names.
@@ -56,9 +56,28 @@ The 83-channel names use  indel spectra features names. The names can be separat
 
 The 83-channel names follow the [COSMIC(v3.4)](https://cancer.sanger.ac.uk/signatures/id/) indel spectra feature naming convention. All 83 channels must be present in the input files for both `milo predict` and `milo train` modes. Channel names may be separated by either underscores (_) or colons (:); for example, 1_Del_C_0 and 1:Del:C:0 are both accepted. 
 
+**Additional Requirement for train mode**
+
+In addition to the format above, the input file for `milo train` must also contain a label column (e.g., MSI_status) with values 0 for MMRp and 1 for MMRd.
+
+### For `train` mode
+MILO requires a similar CSV or TSV input file (`--input <PATH-to-YOUR-FILE>` or `-i <PATH-to-YOUR-FILE>`) containing sample names mutation counts across the 83 indel channels.
+
+In addition, your training file must also contain:  A **label column** (e.g., `MSI_status`) with values `0` for MMRp and `1` for MMRd. 
+
 ---
 
-## Usage
+## Test Data
+
+To help you get started, we provide example datasets for both prediction and training, intended only for demonstration purposes. To run MILO on your own data, simply replace the example files with your own.
+
+- **Download Link:** [test_data.zip](https://github.com/QingliGuo/MILO/raw/main/test_data.zip)
+
+After downloading (`wget https://github.com/QingliGuo/MILO/raw/main/test_data.zip`) and unzipping (`unzip test_data.zip`), you can run the example commands provided in the [Usage](#usage) section.
+
+---
+
+## Usage Demo using Test Data
 
 MILO operates using two main sub-commands: `predict` and `train`.
 
@@ -66,27 +85,23 @@ MILO operates using two main sub-commands: `predict` and `train`.
 
 This is the primary function of MILO. It uses built-in or custom models to classify samples.
 
-#### **Basic Prediction**
+#### **Basic Prediction using Pre-trained models**
 
 * **For FFPE low-pass samples (`ffpe_lp`):**
     ```bash
-    milo predict --input <path/to/your_data.csv> --sample_type ffpe_lp
+    milo predict --input ./test_data/MILO_test_data.csv --sample_type ffpe_lp
     ```
 
 * **For Fresh-Frozen low-pass samples (`ff_lp`):**
     ```bash
-    milo predict --input <path/to/your_data.csv> --sample_type ff_lp
+    milo predict --input ./test_data/MILO_test_data.csv --sample_type ff_lp
     ```
 
 * **For standard, high-quality samples (`standard`):**
     ```bash
-    milo predict --input <path/to/your_data.csv> --sample_type standard
+    milo predict --input ./test_data/MILO_test_data.csv --sample_type standard
     ```
-* **Using a Custom Model trained from your labeled dataset**
-If you have trained your own model, you can use it for prediction instead of the built-in ones.
-    ```bash
-    milo predict --input <path/to/your_data.csv> --custom_model <path/to/your_trained_model.joblib>
-    ```
+    
 #### **Advanced Prediction Options**
 
 You can combine several flags for more detailed analysis:
@@ -96,14 +111,15 @@ You can combine several flags for more detailed analysis:
 * Generate Plots (`-p` or `--plot`): Create and save ID83 profile plots for all samples.
 
 **Example of an advanced analysis run:**
+
 ```bash
 milo predict \
-    --input ./test_data/built_in_model/MILO_test_data.csv \
+    --input ./test_data/MILO_test_data.csv \
     --sample_type ff_lp \
     --output ./milo_analysis \
     --noise_correction \
     --msi_intensity \
-    --cov_norm ./test_data/built_in_model/cov_purity_simulated_data.csv \
+    --cov_norm ./test_data/cov_purity_simulated_data.csv \
     --purity_norm \
     --plot
 ```
@@ -112,16 +128,12 @@ For a full list of options, run `milo predict --help`.
 ## 2. Training a Custom Model (`train`)
 
 You can train a new **Random Forest model** using your own labeled dataset.  
-Your training file must contain:  
-
-- **83 indel channels**  
-- A **label column** (e.g., `MSI_status` with values `0` for MMRp and `1` for MMRd)  
 
 **Example training command:**
 
 ```bash
 milo train \
-    --input ./test_data/custom_model/training_dataset.csv \
+    --input ./test_data/training_dataset.csv \
     --output ./new_milo_model
 ```
 
@@ -129,15 +141,13 @@ This will create a `new_milo_model` directory containing `custom_milo_model.jobl
 
 For a full list of options, run `milo train --help`.
 
----
-
-## Test Data
-
-To help you get started, we provide example datasets for both prediction and training.
-
-- **Download Link:** [test_data.zip](https://github.com/QingliGuo/MILO/raw/main/test_data.zip)
-
-After downloading (`wget https://github.com/QingliGuo/MILO/raw/main/test_data.zip`) and unzipping (`unzip test_data.zip`), you can run the example commands provided in the [Usage](#usage) section.
+**Using a custom model trained from your own labeled dataset**
+  
+You can use your trained your own model for prediction instead of the built-in ones.
+    ```bash
+    milo predict --input ./test_data/testing_dataset.csv --custom_model ./new_milo_model/custom_milo_model.joblib
+    ```    
+You can also combine the flags listed above for more advanced analysis when using your trained model. 
 
 ---
 
@@ -156,6 +166,7 @@ MILO creates an output directory (e.g., `./milo_results/` by default) containing
         * `MSI intensity`: For standard, high-quality samples, using original mutation counts.
         * `Relative MSI intensity`: For low-pass samples, using normalised mutation propotions.
         * `MSI intensity (adjusted)`: For low-pass samples, using coverage/purity adjusted mutation counts (`--cov_norm <PATH>`, `--purity_norm`).
+          Note that `--cov_norm` accept a file contains sample names and `coverage` column for normalizing mutation count (`purity` column is optional). 
 
 2.  **`MILO_noise_corrected_profiles.csv` (Optional)**
     This file is generated only when using the `-c` or `--noise_correction` flag. It contains the noise-corrected 83-channel indel profiles for the samples classified as 'Yes'.
