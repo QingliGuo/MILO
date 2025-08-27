@@ -78,7 +78,7 @@ MILO operates using two main sub-commands: `predict` and `train`. Here we use th
 
 This is the primary function of MILO. It uses built-in or custom models to classify samples.
 
-#### **Basic Prediction using Pre-trained models**
+#### ** 1.1 Basic Prediction using Pre-trained models**
 
 * **For FFPE low-pass samples (`ffpe_lp`):**
     ```bash
@@ -95,7 +95,7 @@ This is the primary function of MILO. It uses built-in or custom models to class
     milo predict --input ./test_data/MILO_test_data.csv --sample_type standard
     ```
     
-#### **Advanced Prediction Options**
+#### **1.2 Advanced Prediction Options**
 
 You can combine several flags for more detailed analysis, for example:
 
