@@ -72,7 +72,7 @@ After downloading and unzipping (`unzip test_data.zip`), you can run the example
 
 ## Usage
 
-MILO operates using two main sub-commands: `predict` and `train`.
+MILO operates using two main sub-commands: `predict` and `train`. Here we use the example datasets to demonstrate the usage of MILO.
 
 ### 1. Predicting MSI Status (`predict`)
 
