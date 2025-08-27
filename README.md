@@ -145,21 +145,21 @@ MILO creates an output directory (e.g., `./milo_results/` by default) containing
 
 1.  **`MILO_predictions.csv`**
     This is the main results file. It contains the following columns for each sample:
-    * **`SampleID`**: The identifier for the sample.
-    * **`Prob(MSI)`**: The predicted probability of the sample being MSI-High, ranging from 0.0 to 1.0.
-    * **`MILO_prediction`**: The final classification, which can be 'Yes', 'Maybe', or 'No' based on the probability thresholds.
-    * **MSI Intensity Score (Optional)**: This column is added if you use the `-int` flag. The column name changes based on the input data type:
-        * **`MSI intensity`**: For standard, high-quality samples.
-        * **`Relative MSI intensity`**: For low-pass samples when no coverage data is provided.
-        * **`MSI intensity (adjusted)`**: For low-pass samples when coverage data (`--cov_norm`) is provided.
+    * `SampleID`: The identifier for the sample.
+    * `Prob(MSI)`: The predicted probability of the sample being MSI-High, ranging from 0.0 to 1.0.
+    * `MILO_prediction`: The final classification, which can be 'Yes', 'Maybe', or 'No' based on the probability thresholds. These thresholds can be adjusted using `--yes_threshold <FLOAT>` and/or `--maybe_threshold <FLOAT>`, with default values of 0.75 and 0.5, respectively.
+    * MSI Intensity Score (Optional): This column is added if you use the `-int|--msi_intensity` flag. The column name changes based on the input data type:
+        * `MSI intensity`: For standard, high-quality samples, using original mutation counts.
+        * `Relative MSI intensity`: For low-pass samples, using normalised mutation propotions.
+        * `MSI intensity (adjusted)`: For low-pass samples, using coverage/purity adjusted mutation counts (`--cov_norm <PATH>`, `--purity_norm`).
 
 2.  **`MILO_noise_corrected_profiles.csv` (Optional)**
-    This file is generated only when using the `-c` or `--noise_correction` flag. It contains the corrected 83-channel indel profiles for the samples classified as 'Yes'.
+    This file is generated only when using the `-c` or `--noise_correction` flag. It contains the noise-corrected 83-channel indel profiles for the samples classified as 'Yes'.
 
 3.  **`plots/` Directory (Optional)**
     This directory is created when using the `-p` or `--plot` flag. It contains several subdirectories with ID83 profile plots in PDF format:
-    * **`MMRd/`, `MMRp/`, `Maybe/`**: These folders contain individual profile plots for each sample, categorized by their prediction status.
-    * **`Comparison/`**: This folder contains mirrored comparison plots, such as the average MMRd vs. MMRp profile, or plots showing a sample's profile before and after noise correction.
+    * `MMRd/`, `MMRp/`, `Maybe/`: These folders contain individual profile plots for each sample, categorized by their prediction status.
+    * `Comparison/`: This folder contains mirrored comparison ID83 plots, such as the average MMRd vs. MMRp profile, or plots showing a sample's profile before and after noise correction.
 
 ### `train` Command Output
 
