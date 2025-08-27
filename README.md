@@ -51,7 +51,9 @@ MILO expects a CSV or TSV file containing sample names and mutation counts acros
 1.  **Samples as rows:** The first column contains sample IDs, and the header contains the 83 indel channel names.
 2.  **Samples as columns:** The header contains sample IDs, and the first column contains the 83 indel channel names.
 
-The 83 channel names can be separated by either underscores (`_`) or colons (`:`). For example, `1_Del_C_0` and `1:Del:C:0` are both accepted.
+The 83-channel names use  indel spectra features names. The names can be separated by either underscores (`_`) or colons (`:`). For example, `1_Del_C_0` and `1:Del:C:0` are both accepted.
+
+The 83-channel names follow the [COSMIC(v3.4)](https://cancer.sanger.ac.uk/signatures/id/) indel spectra feature naming convention. All 83 channels must be present in the input files for both `milo predict` and `milo train` modes. Channel names may be separated by either underscores (_) or colons (:); for example, 1_Del_C_0 and 1:Del:C:0 are both accepted. 
 
 ---
 
@@ -145,8 +147,6 @@ To view a copy of this license, visit [http://creativecommons.org/licenses/by-nc
 
 If you use MILO in your research, please cite:
 
-Guo, Q. *et al.*  
-*Long deletion signatures in repetitive genomic regions track somatic evolution and enable sensitive detection of microsatellite instability.*  
-*bioRxiv* 2024.10.03.616572 (2024) doi: [10.1101/2024.10.03.616572](https://doi.org/10.1101/2024.10.03.616572)
+Guo, Q. *et al.*  *Long deletion signatures in repetitive genomic regions track somatic evolution and enable sensitive detection of microsatellite instability.* *bioRxiv* 2024.10.03.616572 (2024) doi [10.1101/2024.10.03.616572](https://doi.org/10.1101/2024.10.03.616572)
 
 [Link to Preprint](https://doi.org/10.1101/2024.10.03.616572)
