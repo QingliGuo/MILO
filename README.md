@@ -99,3 +99,18 @@ milo predict \
     --cov_norm ./test_data/built_in_model/cov_purity_simulated_data.csv \
     --purity_norm \
     --plot
+
+## 2. Training a Custom Model (`train`)
+
+You can train a new **Random Forest model** using your own labeled dataset.  
+Your training file must contain:  
+
+- **83 indel channels**  
+- A **label column** (e.g., `MSI_status` with values `0` for MMRp and `1` for MMRd)  
+
+**Example training command:**
+
+```bash
+milo train \
+    --input ./test_data/custom_model/training_dataset.csv \
+    --output ./new_milo_model
