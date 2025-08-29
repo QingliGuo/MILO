@@ -130,6 +130,7 @@ You can train a new **Random Forest model** using your own labeled dataset.
 milo train \
     --input ./test_data/training_dataset.csv \
     --output ./new_milo_model
+    --feature_set FF_features
 ```
 
 This will create a `new_milo_model` directory containing `custom_milo_model.joblib`, which you can then use with the `predict` command.
