@@ -101,7 +101,7 @@ This is the primary function of MILO. It uses built-in or custom models to class
 
 You can combine several flags for more detailed analysis, for example:
 
-* Noise Correction (`-c` or `--noise_correction`): Correct for technical noise in low-pass samples.
+* Noise Correction (`-c` or `--noise_correction`): Corrected non-MSI noise in low-pass samples by repurposing the [FFPEsig](https://github.com/QingliGuo/FFPEsig) denoising algorithm, implemented in MILO. See our previous [publication](https://www.nature.com/articles/s41467-022-32041-5) for details.
 * MSI Intensity Score (`-int` or `--msi_intensity`): Calculate a quantitative score for the degree of instability.
 * Generate Plots (`-p` or `--plot`): Create and save ID83 profile plots for all samples.
 
