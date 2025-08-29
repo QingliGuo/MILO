@@ -1,7 +1,7 @@
 # MILO: Microsatellite Instability prediction using a Long-deletion signature
-v1.8.0
 [![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![Python Version](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+![version](https://img.shields.io/badge/version-v1.8.0-blue.svg)
 
 **MILO** is a command-line tool for predicting microsatellite instability (MSI) status from 83-channel indel mutation profiles. It supports a wide range of sample qualities, including shallow-sequencing data with coverage as low as 0.1× (or lower) and low-purity FF/FFPE samples with tumour content as low as 2–5% (without requiring a matched normal), as well as standard processed indel profiles.
 
