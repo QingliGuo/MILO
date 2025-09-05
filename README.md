@@ -34,7 +34,9 @@ Installing MILO in a dedicated Conda environment is strongly recommended to ensu
 2.  **Install MILO from PyPI:**
     This will automatically install all the correct versions of the required dependencies.
     ```bash
-    pip install milo-mmrd
+    git clone https://github.com/QingliGuo/MILO.git
+    cd MILO
+    pip install .
     ```
 
 3.  **Verify the installation:**
