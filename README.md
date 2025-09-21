@@ -5,7 +5,7 @@
 
 **MILO** is a command-line tool for predicting microsatellite instability (MSI) status from 83-channel indel mutation profiles. It supports a wide range of sample qualities, including shallow-sequencing data with coverage as low as 0.1× (or lower) and low-purity FF/FFPE samples with tumour content as low as 2–5% (without requiring a matched normal), as well as standard processed indel profiles.
 
-We also provide the data processing [pipeline](https://github.com/QingliGuo/Low-pass-mut) for generating 83-channel indel mutation profiles from low-pass WGS BAM files. We recommend using this pipeline for the analysis of shallow-sequenced genomes that lack a matched normal.
+We also provide the data processing [pipeline](https://github.com/QingliGuo/Low-pass-mut) for generating 83-channel indel mutation profiles from low-pass sequencing BAM files. We recommend using this pipeline for the analysis of shallow-sequenced genomes that lack a matched normal.
 
 ## Table of Contents
 
